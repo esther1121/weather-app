@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Web App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="left">
+        <div>
+          <!-- <i class="fa fa-bolt" aria-hidden="true"></i> -->
+          <img src="assets/storm.png" />
+        </div>
+      </div>
+      <div class="search">
+        <i class="fa fa-search" aria-hidden="true"></i>
+
+        <input id="searchBtn" placeholder="Enter City" />
+      </div>
+      <div class="right">
+        <select class="unit desktop-dropdown" id="unit-dropdown">
+          <option value="Celsius" class="unit-item">Celsius</option>
+          <option value="Fahrenheit" class="unit-item">Fahrenheit</option>
+        </select>
+        <button id="locationBtn-mobile" class="mobile-location-btn">
+          <i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="center">
+      <div class="weather-data">
+        <div class="button-wrapper">
+          <p>Get weather for my location</p>
+          <button id="locationBtn" class="desktop-location-btn">
+            <i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>
+          </button>
+        </div>
+        <select class="unit mobile-dropdown" id="unit-dropdown-mobile">
+          <option value="Celsius" class="unit-item">Celsius</option>
+          <option value="Fahrenheit" class="unit-item">Fahrenheit</option>
+        </select>
+        <p id="location">London, 12c</p>
+        <p id="desc">Description</p>
+        <span id="date">28'sep</span>
+      </div>
+      <div id="bottom">
+        <div class="weather-item">
+          <div class="weather-item-title">
+            <p class="label">Current Temperature</p>
+            <i class="fa fa-cloud" aria-hidden="true"></i>
+          </div>
+          <p class="value" id="temp">30c</p>
+        </div>
+        <div class="weather-item">
+          <div class="weather-item-title">
+            <p class="label">Humidity</p>
+
+            <i class="fa fa-tint" aria-hidden="true"></i>
+          </div>
+          <p class="value" id="humidity">30c</p>
+        </div>
+        <div class="weather-item">
+          <div class="weather-item-title">
+            <p class="label">Wind Speed</p>
+            <i class="fa fa-mixcloud" aria-hidden="true"></i>
+          </div>
+          <p class="value" id="speed">30c</p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

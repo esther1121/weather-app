@@ -1,0 +1,235 @@
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  font-size: 20p;
+  padding: 10px 20px;
+}
+
+.search {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 50%;
+}
+.search input {
+  border: none;
+  outline: none;
+  font-family: "Libre Baskerville", serif;
+  padding: 6px 0;
+  width: 95%;
+  background-color: transparent;
+}
+.search input::placeholder {
+  font-family: "Libre Baskerville", serif;
+  color: black;
+}
+
+#center {
+  /* background: linear-gradient(to right, rgba(255, 255, 255, 0.6), transparent),
+    url("assets/weatherimg.jpeg"); */
+  width: calc(100% - 40px);
+  padding: 10px;
+  margin: 10px;
+  height: calc(100vh - 125px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all ease-in 0.3ms;
+}
+#bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 95px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+.weather-item {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  padding: 10px;
+  width: 20%;
+}
+.weather-item-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+body {
+  background-color: #e0fbfc;
+  font-family: "Libre Baskerville", serif;
+  padding: "10px 20px";
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), transparent),
+    url("assets/bg3.jpg");
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+#unit-dropdown,
+#unit-dropdown-mobile {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-family: "Libre Baskerville", serif;
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.right,
+.left {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.desktop-location-btn {
+  padding: 10px 15px;
+
+  font-family: "Libre Baskerville", serif;
+  width: fit-content;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  display: block;
+}
+.mobile-location-btn {
+  display: none;
+}
+
+#location {
+  color: white;
+  font-size: 35px;
+}
+#temperature {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+}
+#desc {
+  color: white;
+  font-size: 20px;
+}
+#date {
+  color: white;
+  font-size: 18px;
+}
+.button-wrapper {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.mobile-location-btn {
+  display: none;
+}
+.mobile-dropdown {
+  display: none;
+}
+.desktop-dropdown {
+  display: block;
+}
+.button-wrapper p {
+  color: white;
+  display: inline;
+}
+.weather-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+img {
+  width: 70px;
+  height: 70px;
+}
+.value,.label{
+  text-align: center;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 600px) {
+  #center {
+    background: none;
+    height: auto;
+  }
+  .mobile-dropdown {
+    display: block;
+    place-self: center;
+  }
+  .desktop-dropdown {
+    display: none;
+  }
+  .mobile-location-btn {
+    display: block;
+  }
+  .button-wrapper {
+    display: block;
+  }
+
+  #bottom {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    gap: 10px;
+  }
+  .weather-item {
+    width: 100%;
+  }
+  body {
+    background: url("assets/bg1.jpg");
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: scroll;
+  }
+  #location,
+  #desc,
+  #date,
+  .mobile-location-btn {
+    width: 100%;
+    text-align: center;
+    color: black;
+    display: block;
+  }
+  .mobile-location-btn {
+    padding: 10px 15px;
+
+    width: fit-content;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: black;
+    display: block;
+  }
+
+  .desktop-location-btn {
+    display: block;
+  }
+  .button-wrapper {
+    display: none;
+  }
+
+  #location {
+    margin: 10px 0;
+  }
+  img {
+    width: 35px;
+    height: 35px;
+  }
+}
